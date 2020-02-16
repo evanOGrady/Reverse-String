@@ -1,0 +1,30 @@
+using System;
+
+namespace Reverse_string
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write($"Enter a string a I'll reverse the characters!: ");
+            string phrase = Convert.ToString(Console.ReadLine());
+
+            // Make the code for the revese string
+            int count = 0;
+            foreach (char c in phrase)
+            {
+                count++;
+            }
+            // Make the code that finds the last char in the string
+            Console.Write($"\nYou entered {phrase}. Here is that same string in reverse: ");
+            int increment = 1;
+            foreach (char c in phrase)
+            {
+                char reverse = phrase[phrase.Length - increment];
+                increment++;
+                Console.Write($"{reverse}");
+            }
+            Console.WriteLine(" ");
+        }
+    }
+}
